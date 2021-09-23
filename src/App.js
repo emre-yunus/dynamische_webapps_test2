@@ -1,9 +1,10 @@
 import './App.css';
+import {NUMBER_DATA} from "./data/data";
+import {Numbers} from "./components/Numbers";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Numbers title="Nummers" numbers={NUMBER_DATA} />
   );
 }
 
