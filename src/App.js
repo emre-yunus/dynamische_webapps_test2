@@ -3,6 +3,8 @@ import {CARS_DATA, NUMBER_DATA, PERSON_DATA} from "./data/data";
 import {Numbers} from "./components/Numbers";
 import {Cars} from "./components/Cars";
 import {Persons} from "./components/Person";
+import {Cities} from "./components/City";
+import {citiesFromPersons} from "./utilities/citiesFromPersons";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Persons title="Personen volgens leeftijd" persons={[...PERSON_DATA].sort((p1, p2) => p1.age - p2.age)} />
         <Numbers title="Leeftijden van de personen" numbers={PERSON_DATA.map(p => p.age)} />
         <Numbers title="Leeftijden van de personen gesorteerd" numbers={[...new Set(PERSON_DATA.map(p => p.age))].sort((a1, a2) => a1 - a2)} />
+        <Cities title="Steden test" cities={[{name: "Antwerpen", numberOfPersons: 125}, {name: "Brussel", numberOfPersons: 32}]} />
+        <Cities title="Steden waar personen wonen" cities={citiesFromPersons(PERSON_DATA)} />
       </div>
   );
 }
