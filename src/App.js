@@ -1,7 +1,8 @@
 import './App.css';
-import {CARS_DATA, NUMBER_DATA} from "./data/data";
+import {CARS_DATA, NUMBER_DATA, PERSON_DATA} from "./data/data";
 import {Numbers} from "./components/Numbers";
 import {Cars} from "./components/Cars";
+import {Persons} from "./components/Person";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Numbers title="Nummers groter dan 6" numbers={NUMBER_DATA.filter(n => n > 6)} />
         <Numbers title="Nummers x 2" numbers={NUMBER_DATA.map(n => n * 2)} />
         <Cars title="Auto's" cars={CARS_DATA} />
+        <Persons title="Personen" persons={PERSON_DATA} />
       </div>
   );
 }

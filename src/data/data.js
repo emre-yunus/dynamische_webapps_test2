@@ -16,3 +16,36 @@ export const KLEUREN = [
     { nl: "grijs", background: "gray" },
     { nl: "groen", background: "green" }
 ];
+
+export const PERSON_DATA = [
+    {
+        id: 1,
+        name: "Jan",
+        age: 18,
+        city: "Mechelen"
+    },
+    {
+        id: 2,
+        name: "Marie",
+        age: 25,
+        city: "Katelijne"
+    },
+    {
+        id: 3,
+        name: "Anton",
+        age: 16,
+        city: "Duffel"
+    },
+    {
+        id: 4,
+        name: "Yves",
+        age: 24,
+        city: "Mechelen"
+    },
+    {
+        id: 5,
+        name: "Marijke",
+        age: 16,
+        city: "Duffel"
+    },
+];
