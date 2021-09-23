@@ -1,3 +1,5 @@
+import {Section} from "./Section";
+
 function City(props) {
     const {city} = props;
     return <div className="card">
@@ -8,8 +10,5 @@ function City(props) {
 
 export function Cities(props) {
     const {title, cities} = props;
-    return <div className="section">
-        <h3>{title}</h3>
-        {cities.map(c => <City key={c.name} city={c} />)}
-    </div>
+    return <Section title={title} content={cities.map(c => <City key={c.name} city={c} />)} />
 }

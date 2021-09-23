@@ -1,4 +1,5 @@
 import {KLEUREN} from "../data/data";
+import {Section} from "./Section";
 
 function Element(props) {
     const {name, value} = props;
@@ -27,8 +28,5 @@ function Car(props) {
 
 export function Cars(props) {
     const {title, cars} = props;
-    return <div className="section">
-        <h3>{title}</h3>
-        {cars.map(car => <Car key={car.name} car={car} />)}
-    </div>
+    return <Section title={title} content={cars.map(car => <Car key={car.name} car={car} />)} />
 }

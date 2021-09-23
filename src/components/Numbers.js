@@ -1,9 +1,8 @@
+import {Section} from "./Section";
+
 export function Numbers(props) {
     const {title, numbers} = props;
-    return <div className="section">
-        <h3>{title}</h3>
-        {numbers.map((val, key) => <Number number={val} key={key} />)}
-    </div>
+    return <Section title={title} content={numbers.map((val, key) => <Number number={val} key={key} />)} />
 }
 
 function Number(props) {

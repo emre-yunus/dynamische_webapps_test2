@@ -1,3 +1,5 @@
+import {Section} from "./Section";
+
 function Person(props) {
     const {person} = props;
     return <div className="card">
@@ -9,8 +11,5 @@ function Person(props) {
 
 export function Persons(props) {
     const {title, persons} = props;
-    return <div className="section">
-        <h3>{title}</h3>
-        {persons.map(p => <Person key={p.id} person={p} />)}
-    </div>
+    return <Section title={title} content={persons.map(p => <Person key={p.id} person={p} />)} />
 }
