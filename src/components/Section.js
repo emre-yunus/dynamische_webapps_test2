@@ -1,7 +1,7 @@
 export function Section(props) {
-    const {title, content} = props;
+    const {title, children} = props;
     return <div className="section">
         <h3>{title}</h3>
-        {content}
+        {children}
     </div>
 }

@@ -11,5 +11,7 @@ function Person(props) {
 
 export function Persons(props) {
     const {title, persons} = props;
-    return <Section title={title} content={persons.map(p => <Person key={p.id} person={p} />)} />
+    return <Section title={title}>
+        {persons.map(p => <Person key={p.id} person={p} />)}
+    </Section>
 }

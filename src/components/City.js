@@ -10,5 +10,7 @@ function City(props) {
 
 export function Cities(props) {
     const {title, cities} = props;
-    return <Section title={title} content={cities.map(c => <City key={c.name} city={c} />)} />
+    return <Section title={title}>
+        {cities.map(c => <City key={c.name} city={c} />)}
+    </Section>
 }
