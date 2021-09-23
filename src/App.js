@@ -14,6 +14,7 @@ function App() {
         <Persons title="Personen" persons={PERSON_DATA} />
         <Persons title="Personen volgens leeftijd" persons={[...PERSON_DATA].sort((p1, p2) => p1.age - p2.age)} />
         <Numbers title="Leeftijden van de personen" numbers={PERSON_DATA.map(p => p.age)} />
+        <Numbers title="Leeftijden van de personen gesorteerd" numbers={[...new Set(PERSON_DATA.map(p => p.age))].sort((a1, a2) => a1 - a2)} />
       </div>
   );
 }
