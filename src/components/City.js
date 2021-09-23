@@ -1,11 +1,12 @@
 import {Section} from "./Section";
+import {Card} from "./Card";
 
 function City(props) {
     const {city} = props;
-    return <div className="card">
+    return <Card>
         <div>{city.name}</div>
         <div>{city.numberOfPersons}</div>
-    </div>
+    </Card>
 }
 
 export function Cities(props) {

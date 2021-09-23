@@ -1,12 +1,12 @@
 import {Section} from "./Section";
+import {Card} from "./Card";
 
 function Person(props) {
     const {person} = props;
-    return <div className="card">
-        <h4>{person.name}</h4>
+    return <Card title={person.name}>
         <div>{person.age}</div>
         <div>{person.city}</div>
-    </div>
+    </Card>
 }
 
 export function Persons(props) {

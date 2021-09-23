@@ -1,13 +1,10 @@
 import {Section} from "./Section";
+import {Card} from "./Card";
 
 export function Numbers(props) {
     const {title, numbers} = props;
     return <Section title={title}>
-        {numbers.map((val, key) => <Number number={val} key={key} />)}
+        {numbers.map((val, key) => <Card key={key}>{val}</Card>)}
     </Section>
 }
 
-function Number(props) {
-    const {number} = props;
-    return <div className="card">{number}</div>
-}

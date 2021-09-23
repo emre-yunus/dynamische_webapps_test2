@@ -1,5 +1,6 @@
 import {KLEUREN} from "../data/data";
 import {Section} from "./Section";
+import {Card} from "./Card";
 
 function Element(props) {
     const {name, value} = props;
@@ -18,12 +19,11 @@ function ColoredElement(props) {
 
 function Car(props) {
     const {car} = props;
-    return <div className="card big">
-        <h4>{car.name}</h4>
+    return <Card title={car.name} extraClass="big">
         <Element name="merk" value={car.brand} />
         <Element name="type" value={car.type} />
         <Element name="kleur" value={car.color} />
-    </div>
+    </Card>
 }
 
 export function Cars(props) {
