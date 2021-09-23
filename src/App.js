@@ -5,6 +5,7 @@ import {Cars} from "./components/Cars";
 import {Persons} from "./components/Person";
 import {Cities} from "./components/City";
 import {citiesFromPersons} from "./utilities/citiesFromPersons";
+import {EventDemo} from "./components/EventDemo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Numbers title="Leeftijden van de personen gesorteerd" numbers={[...new Set(PERSON_DATA.map(p => p.age))].sort((a1, a2) => a1 - a2)} />
         <Cities title="Steden test" cities={[{name: "Antwerpen", numberOfPersons: 125}, {name: "Brussel", numberOfPersons: 32}]} />
         <Cities title="Steden waar personen wonen" cities={citiesFromPersons(PERSON_DATA)} />
+        <EventDemo />
       </div>
   );
 }
