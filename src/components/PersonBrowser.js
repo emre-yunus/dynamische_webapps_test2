@@ -32,7 +32,7 @@ export function PersonBrowser(props) {
         <hr />
         <div className="personWithButtons">
             <button onClick={() => setShownPerson(searchPerson(false))}>&lt;</button>
-            <Person person={shownPerson} />
+            <Person person={shownPerson} isFavorite={isPersonFavorite} />
             <button onClick={() => setShownPerson(searchPerson(true))}>&gt;</button>
         </div>
         <button onClick={() => toggleFavoritePerson()}>{toggleFavoriteButtonText}</button>

@@ -2,8 +2,8 @@ import {Section} from "./Section";
 import {Card} from "./Card";
 
 export function Person(props) {
-    const {person} = props;
-    return <Card title={person.name}>
+    const {person, isFavorite} = props;
+    return <Card title={person.name} extraClass={isFavorite ? "favorite" : ""}>
         <div>{person.age}</div>
         <div>{person.city}</div>
     </Card>

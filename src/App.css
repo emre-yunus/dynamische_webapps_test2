@@ -31,6 +31,10 @@ body {
     width: 45%;
 }
 
+.card.favorite {
+    border: 2px solid red;
+}
+
 .personWithButtons {
     display: flex;
     justify-content: center;
