@@ -1,3 +1,5 @@
+import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {CARS_DATA, NUMBER_DATA, PERSON_DATA} from "./data/data";
 import {Numbers} from "./components/Numbers";
