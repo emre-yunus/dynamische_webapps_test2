@@ -30,3 +30,13 @@ body {
 .card.big {
     width: 45%;
 }
+
+.personWithButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.personWithButtons button {
+    margin-top: 6vw;
+    height: 20px;
+}
