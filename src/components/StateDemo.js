@@ -14,6 +14,18 @@ function OnOffDemo() {
     </>
 }
 
+function CounterDemo(props) {
+    const { counter, setCounter } = props;
+    return <>
+        <h3>de huidige waarde van counter is {counter}</h3>
+        <button onClick={() => setCounter(counter + 1)}>verhoog</button>
+        <button onClick={() => setCounter(counter - 1)}>verlaag</button>
+        <button onClick={() => setCounter(counter + 1)}>+</button>
+        <button onClick={() => setCounter(counter - 1)}>-</button>
+        <p>de huidige waarde van counter is {counter}</p>
+        </>
+}
+
 export function StateDemo() {
     const [counter, setCounter] = useState(0);
     const [favoriteNumbers, setFavoriteNumbers] = useState([]);
@@ -31,12 +43,7 @@ export function StateDemo() {
     return <Section title="state">
         <OnOffDemo />
         <hr />
-        <h3>de huidige waarde van counter is {counter}</h3>
-        <button onClick={() => setCounter(counter + 1)}>verhoog</button>
-        <button onClick={() => setCounter(counter - 1)}>verlaag</button>
-        <button onClick={() => setCounter(counter + 1)}>+</button>
-        <button onClick={() => setCounter(counter - 1)}>-</button>
-        <p>de huidige waarde van counter is {counter}</p>
+        <CounterDemo counter={counter} setCounter={setCounter} />
         <hr />
         <Numbers title="Mijn favorieten" numbers={favoriteNumbers} />
         <button onClick={() => toggleFavoriteNumber()}>{toggleFavoriteButtonText}</button>
