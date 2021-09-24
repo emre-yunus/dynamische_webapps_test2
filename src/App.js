@@ -6,6 +6,7 @@ import {Persons} from "./components/Person";
 import {Cities} from "./components/City";
 import {citiesFromPersons} from "./utilities/citiesFromPersons";
 import {EventDemo} from "./components/EventDemo";
+import {StateDemo} from "./components/StateDemo";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Cities title="Steden test" cities={[{name: "Antwerpen", numberOfPersons: 125}, {name: "Brussel", numberOfPersons: 32}]} />
         <Cities title="Steden waar personen wonen" cities={citiesFromPersons(PERSON_DATA)} />
         <EventDemo />
+        <StateDemo />
       </div>
   );
 }
