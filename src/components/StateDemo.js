@@ -1,6 +1,8 @@
 import {useState} from "react";
 import {Section} from "./Section";
 import {Numbers} from "./Numbers";
+import {PERSON_DATA} from "../data/data";
+import {PersonBrowser} from "./PersonBrowser";
 
 function OnOffDemo() {
     const [isOn, setIsOn] = useState(false);
@@ -47,5 +49,7 @@ export function StateDemo() {
         <hr />
         <Numbers title="Mijn favorieten" numbers={favoriteNumbers} />
         <button onClick={() => toggleFavoriteNumber()}>{toggleFavoriteButtonText}</button>
+        <hr />
+        <PersonBrowser persons={PERSON_DATA} />
     </Section>
 }

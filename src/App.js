@@ -7,7 +7,6 @@ import {Cities} from "./components/City";
 import {citiesFromPersons} from "./utilities/citiesFromPersons";
 import {EventDemo} from "./components/EventDemo";
 import {StateDemo} from "./components/StateDemo";
-import {PersonBrowser} from "./components/PersonBrowser";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
         <Cities title="Steden waar personen wonen" cities={citiesFromPersons(PERSON_DATA)} />
         <EventDemo />
         <StateDemo />
-        <PersonBrowser persons={PERSON_DATA} />
       </div>
   );
 }
