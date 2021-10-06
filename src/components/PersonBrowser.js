@@ -31,9 +31,9 @@ export function PersonBrowser(props) {
         <Persons persons={favoritePersons} title="Mijn favoriete personen" />
         <hr />
         <div className="personWithButtons">
-            <button onClick={() => setShownPerson(searchPerson(false))}>&lt;</button>
+            <button style={{display: "flex", alignItems: "center"}} onClick={() => setShownPerson(searchPerson(false))}>&larr;</button>
             <Person person={shownPerson} isFavorite={isPersonFavorite} />
-            <button onClick={() => setShownPerson(searchPerson(true))}>&gt;</button>
+            <button style={{display: "flex", alignItems: "center"}} onClick={() => setShownPerson(searchPerson(true))}><span>&rarr;</span></button>
         </div>
         <button onClick={() => toggleFavoritePerson()}>{toggleFavoriteButtonText}</button>
     </>
