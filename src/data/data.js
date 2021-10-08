@@ -49,3 +49,11 @@ export const PERSON_DATA = [
         city: "Duffel"
     },
 ];
+
+export const HOUSE_DATA = [
+    { name: "Villa Termite", type: "residence", address: "Echo Beach 2341", price: 1350000, status: "for sale" },
+    { name: "Red Bungalow", type: "house", address: "Bland Forest 34A", price: 375000, status: "for sale" },
+    { name: "Blue Bungalow", type: "house", address: "Bland Forest 39C", price: 225000, status: "option" },
+    { name: "Appartment 9", type: "flat", address: "Sunny Street 567", price: 295000, status: "for sale" },
+    { name: "Roof Appartment 5", type: "flat", address: "Sunny Street 567", price: 589000, status: "for sale" }
+];
