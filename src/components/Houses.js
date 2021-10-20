@@ -1,6 +1,7 @@
 import {Section} from "./Section";
 import {Card} from "./Card";
 import React, {useState} from "react";
+import {HouseButtons} from "./HouseButtons";
 
 export function Houses(props) {
     const {title, houses} = props;
@@ -12,24 +13,13 @@ export function Houses(props) {
 function House(props) {
     const {house} = props;
     const [status, setStatus] = useState(house.status);
-    let button;
-    if(status == "for sale") {
-        button = <div>
-            <button onClick={(e) => {e.stopPropagation();setStatus("option")}}>in option</button>
-            <button onClick={(e) => {e.stopPropagation();setStatus("sold")}}>sold</button>
-        </div>
-    } else if(status == "option"){
-        button = <div>
-            <button onClick={(e) => {e.stopPropagation();setStatus("sold")}}>sold</button>
-        </div>
-    }
 
-    return <Card extraClass={status=="for sale" ? "forsale" : status=="sold" ? "sold" : "option"} title={house.name}>
+    return <Card extraClass={status==="for sale" ? "forsale" : status==="sold" ? "sold" : "option"} title={house.name}>
         <Element name={"type"} value={house.type}/>
         <Element name={"address"} value={house.address}/>
         <Element name={"price"} value={house.price}/>
         <Element name={"status"} value={status}/>
-        {(status == "sold") ? <></> : button}
+        <HouseButtons status={status} setStatus={setStatus}/>
     </Card>
 
 }
