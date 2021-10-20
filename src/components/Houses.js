@@ -15,12 +15,12 @@ function House(props) {
     let button;
     if(status == "for sale") {
         button = <div>
-            <button onClick={() => setStatus("option")}>in option</button>
-            <button onClick={() => setStatus("sold")}>sold</button>
+            <button onClick={(e) => {e.stopPropagation();setStatus("option")}}>in option</button>
+            <button onClick={(e) => {e.stopPropagation();setStatus("sold")}}>sold</button>
         </div>
     } else if(status == "option"){
         button = <div>
-            <button onClick={() => setStatus("sold")}>sold</button>
+            <button onClick={(e) => {e.stopPropagation();setStatus("sold")}}>sold</button>
         </div>
     }
 
